@@ -2,19 +2,19 @@
   "manifestVersion": "3.2",
   "admin": {
     "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-    "txHash": "0x44af9f28e781acbabac9a06b5ede72586d37b8ee95f1ec1e49492846241423c8"
+    "txHash": "0x361f722870cfe3b924ed8cb904527d0250f83932fd05a93d72d9824a463759ba"
   },
   "proxies": [
     {
       "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
-      "txHash": "0xf111d9d7a4952c96f6a37eff47b6c8ef31c6e6ab6a4b6298a6ba69e28c3534a2",
+      "txHash": "0xc8bdf2262b5927810ccd505b3a523d6e4eaba53a13a14c73daeeba06e41e78e1",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "21b1a845b7c05725d3f396b2dd46ae1f430c125d7286026a73ff8b14d94f03cc": {
+    "e2500673ac14462b868ff5bb423c52713b92450e9dd1881cd74e9e5b001e2bdc": {
       "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
-      "txHash": "0x5e8face4e213c63c05b88fa9f8681296d71b1cf38727fdd88e0fe39772a92537",
+      "txHash": "0xca1876d28583bf5dc28214de6aefe946f060deab4aba9f02b9f3b8ab4d51f819",
       "layout": {
         "storage": [
           {
@@ -77,17 +77,17 @@
             "label": "token",
             "offset": 0,
             "slot": "151",
-            "type": "t_contract(IERC20)619",
+            "type": "t_contract(IERC20)1207",
             "contract": "LiqualitySplit",
-            "src": "contracts\\LiqualitySplit.sol:15"
+            "src": "contracts\\LiqualitySplit.sol:11"
           },
           {
             "label": "userInfos",
             "offset": 0,
             "slot": "152",
-            "type": "t_mapping(t_address,t_struct(UserInfo)1359_storage)",
+            "type": "t_mapping(t_address,t_struct(UserInfo)1597_storage)",
             "contract": "LiqualitySplit",
-            "src": "contracts\\LiqualitySplit.sol:16"
+            "src": "contracts\\LiqualitySplit.sol:12"
           },
           {
             "label": "userList",
@@ -95,7 +95,7 @@
             "slot": "153",
             "type": "t_array(t_address)dyn_storage",
             "contract": "LiqualitySplit",
-            "src": "contracts\\LiqualitySplit.sol:17"
+            "src": "contracts\\LiqualitySplit.sol:13"
           },
           {
             "label": "totalAmount",
@@ -103,7 +103,7 @@
             "slot": "154",
             "type": "t_uint256",
             "contract": "LiqualitySplit",
-            "src": "contracts\\LiqualitySplit.sol:18"
+            "src": "contracts\\LiqualitySplit.sol:14"
           }
         ],
         "types": {
@@ -127,15 +127,15 @@
             "label": "bool",
             "numberOfBytes": "1"
           },
-          "t_contract(IERC20)619": {
+          "t_contract(IERC20)1207": {
             "label": "contract IERC20",
             "numberOfBytes": "20"
           },
-          "t_mapping(t_address,t_struct(UserInfo)1359_storage)": {
+          "t_mapping(t_address,t_struct(UserInfo)1597_storage)": {
             "label": "mapping(address => struct ILiqualitySplit.UserInfo)",
             "numberOfBytes": "32"
           },
-          "t_struct(UserInfo)1359_storage": {
+          "t_struct(UserInfo)1597_storage": {
             "label": "struct ILiqualitySplit.UserInfo",
             "members": [
               {

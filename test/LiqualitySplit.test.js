@@ -82,6 +82,7 @@ describe('LiqualitySplit', function () {
       await this.liqualitySplit.connect(this.addr2).withDraw();
       const withDrawedAmount = smallNum(await ethers.provider.getBalance(this.addr2.address)) - oldBalance;
       expect(withDrawedAmount).to.greaterThan(0);
+      await this.liqualitySplit.connect(this.addr2).withDraw();
    })
 
 
