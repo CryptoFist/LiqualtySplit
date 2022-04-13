@@ -6,6 +6,8 @@ interface ILiqualitySplit {
    struct UserInfo {
       uint256 shareAmount;
       uint256 streamingTime;
+      uint256 lastClaimedTime;
+      uint256 withdrawableAmount;
    }
 
    function addShare(uint256 amount_) external payable;

@@ -65,7 +65,23 @@ describe('LiqualitySplit', function () {
    })
 
    it ('set streamingTime', async function () {
-      await this.liqualitySplit.connect(this.addr2).setStreamingTime()
+      await expect(
+         this.liqualitySplit.connect(this.addr2).setStreamingTime(0)
+      ).to.be.revertedWith('incorrect time');
+      await this.liqualitySplit.connect(this.addr2).setStreamingTime(2592000);
+      await expect(
+         this.liqualitySplit.connect(this.addr2).setStreamingTime(2592000)
+      ).to.be.revertedWith('already set');
+   })
+
+   it ('deposit ETH and withdraw ETH again', async function () {
+      await network.provider.send("evm_increaseTime", [1000 * 40]);
+      await network.provider.send("evm_mine");
+      await this.liqualitySplit.depositeETH({value: bigNum(1)});
+      let oldBalance = smallNum(await ethers.provider.getBalance(this.addr2.address));
+      await this.liqualitySplit.connect(this.addr2).withDraw();
+      const withDrawedAmount = smallNum(await ethers.provider.getBalance(this.addr2.address)) - oldBalance;
+      expect(withDrawedAmount).to.greaterThan(0);
    })
 
 

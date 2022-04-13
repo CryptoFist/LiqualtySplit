@@ -12,9 +12,9 @@
     }
   ],
   "impls": {
-    "70b5d40a61ff9911f662f229cdb7e0eb8c10db8016631dc848a81ccfa9a449e9": {
+    "21b1a845b7c05725d3f396b2dd46ae1f430c125d7286026a73ff8b14d94f03cc": {
       "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
-      "txHash": "0xdfe583a402bcad7ffe790485f27be66f436eb0db6376bed6793665ca9e71e019",
+      "txHash": "0x5e8face4e213c63c05b88fa9f8681296d71b1cf38727fdd88e0fe39772a92537",
       "layout": {
         "storage": [
           {
@@ -77,22 +77,30 @@
             "label": "token",
             "offset": 0,
             "slot": "151",
-            "type": "t_contract(IERC20)1207",
+            "type": "t_contract(IERC20)619",
             "contract": "LiqualitySplit",
-            "src": "contracts\\LiqualitySplit.sol:16"
+            "src": "contracts\\LiqualitySplit.sol:15"
           },
           {
             "label": "userInfos",
             "offset": 0,
             "slot": "152",
-            "type": "t_mapping(t_address,t_struct(UserInfo)1825_storage)",
+            "type": "t_mapping(t_address,t_struct(UserInfo)1359_storage)",
+            "contract": "LiqualitySplit",
+            "src": "contracts\\LiqualitySplit.sol:16"
+          },
+          {
+            "label": "userList",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_address)dyn_storage",
             "contract": "LiqualitySplit",
             "src": "contracts\\LiqualitySplit.sol:17"
           },
           {
             "label": "totalAmount",
             "offset": 0,
-            "slot": "153",
+            "slot": "154",
             "type": "t_uint256",
             "contract": "LiqualitySplit",
             "src": "contracts\\LiqualitySplit.sol:18"
@@ -102,6 +110,10 @@
           "t_address": {
             "label": "address",
             "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
           },
           "t_array(t_uint256)49_storage": {
             "label": "uint256[49]",
@@ -115,15 +127,15 @@
             "label": "bool",
             "numberOfBytes": "1"
           },
-          "t_contract(IERC20)1207": {
+          "t_contract(IERC20)619": {
             "label": "contract IERC20",
             "numberOfBytes": "20"
           },
-          "t_mapping(t_address,t_struct(UserInfo)1825_storage)": {
+          "t_mapping(t_address,t_struct(UserInfo)1359_storage)": {
             "label": "mapping(address => struct ILiqualitySplit.UserInfo)",
             "numberOfBytes": "32"
           },
-          "t_struct(UserInfo)1825_storage": {
+          "t_struct(UserInfo)1359_storage": {
             "label": "struct ILiqualitySplit.UserInfo",
             "members": [
               {
@@ -137,9 +149,21 @@
                 "type": "t_uint256",
                 "offset": 0,
                 "slot": "1"
+              },
+              {
+                "label": "lastClaimedTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "withdrawableAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
               }
             ],
-            "numberOfBytes": "64"
+            "numberOfBytes": "128"
           },
           "t_uint256": {
             "label": "uint256",
